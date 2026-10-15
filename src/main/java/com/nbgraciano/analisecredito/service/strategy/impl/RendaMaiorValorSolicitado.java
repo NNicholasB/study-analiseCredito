@@ -2,7 +2,9 @@ package com.nbgraciano.analisecredito.service.strategy.impl;
 
 import com.nbgraciano.analisecredito.domain.Proposta;
 import com.nbgraciano.analisecredito.service.strategy.CalculoPonto;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RendaMaiorValorSolicitado implements CalculoPonto {
     @Override
     public int calcular(Proposta proposta) {
