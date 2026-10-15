@@ -2,9 +2,11 @@ package com.nbgraciano.analisecredito.service.strategy.impl;
 
 import com.nbgraciano.analisecredito.domain.Proposta;
 import com.nbgraciano.analisecredito.service.strategy.CalculoPonto;
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
+@Component
 public class OutrosEmprestimosEmAndamento implements CalculoPonto {
 
 
