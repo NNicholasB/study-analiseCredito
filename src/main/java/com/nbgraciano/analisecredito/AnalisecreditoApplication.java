@@ -18,10 +18,4 @@ public class AnalisecreditoApplication {
 		SpringApplication.run(AnalisecreditoApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(){
-		return args -> {
-			service.analisar();
-		};
-	}
 }
