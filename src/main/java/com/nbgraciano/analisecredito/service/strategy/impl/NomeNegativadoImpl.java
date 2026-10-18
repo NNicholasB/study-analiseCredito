@@ -1,18 +1,22 @@
 package com.nbgraciano.analisecredito.service.strategy.impl;
 
+import com.nbgraciano.analisecredito.constantes.MensagemConstante;
 import com.nbgraciano.analisecredito.domain.Proposta;
+import com.nbgraciano.analisecredito.exception.StrategyException;
 import com.nbgraciano.analisecredito.service.strategy.CalculoPonto;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
+@Order(1)
 @Component
 public class NomeNegativadoImpl implements CalculoPonto {
 
     @Override
     public int calcular(Proposta proposta) {
        if (nomeNegativado()){
-           throw new RuntimeException("Nome negativado");
+           throw new StrategyException(String.format(MensagemConstante.CLIENTE_NEGATIVADO,proposta.getUsuario().getNome()));
        }
         return 100;
     }
