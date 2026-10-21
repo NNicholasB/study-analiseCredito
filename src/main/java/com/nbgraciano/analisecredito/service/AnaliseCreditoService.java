@@ -19,7 +19,7 @@ public class AnaliseCreditoService {
     @Autowired
     private List<CalculoPonto> calculoPontoList;
 
-    @Value("${rabbitmq.propostaconcluida.exchange}")
+    @Value("${rabbitmq.proposta.concluida.exchange}")
     private String exchangePropostaConcluida;
 
     public void analisar(Proposta proposta){
